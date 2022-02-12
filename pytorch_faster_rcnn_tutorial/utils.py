@@ -173,7 +173,8 @@ def log_packages_neptune(neptune_logger):
         packages, orient="index", columns=["package", "version"]
     )
 
-    log_table(name="packages", table=packages_df, experiment=neptune_logger.experiment)
+    #log_table(name="packages", table=packages_df, experiment=neptune_logger.experiment)
+    log_table(name="packages", table=packages_df)
 
 
 def log_mapping_neptune(mapping: dict, neptune_logger):
@@ -181,7 +182,8 @@ def log_mapping_neptune(mapping: dict, neptune_logger):
     mapping_df = pd.DataFrame.from_dict(
         mapping, orient="index", columns=["class_value"]
     )
-    log_table(name="mapping", table=mapping_df, experiment=neptune_logger.experiment)
+    #log_table(name="mapping", table=mapping_df, experiment=neptune_logger.experiment)
+    log_table(name="mapping", table=mapping_df)
 
 
 def log_model_neptune(
